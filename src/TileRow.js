@@ -4,24 +4,27 @@ import Tile from './Tile.js';
 import AppState from './AppState.js';
 
 type TileRowProps = {
-  content: string
+  content: string,
+  key: number,
+  id: number
 }
-
 
 class TileRow extends Component<TileRowProps> {
   props: TileRowProps;
 
-  renderLetter(letter) {
+  renderLetter(letter, prefix, index) {
+    const myKey = 10 * prefix + index;
     return (
-      <Tile letter={letter} chosen={false} />
+      <Tile letter={letter} chosen={false} key={myKey} id={myKey}/>
       )
   };
 
   render() {
     const content = this.props.content;
+    const prefix = this.props.id;
     return (
       <p>
-        {content.map(letter => this.renderLetter(letter))}
+        {content.map((letter, index) => this.renderLetter(letter, prefix, index))}
       </p>
     )
   }

@@ -13,9 +13,9 @@ type BoardProps = {
 
 class Board extends Component<BoardProps> {
   props: BoardProps;
-  renderLetters(letters) {
+  renderLetters(letters, index) {
     return (
-      <TileRow content={letters} />
+      <TileRow content={letters} key={index} id={index}/>
     )
   }
 
@@ -23,7 +23,7 @@ class Board extends Component<BoardProps> {
     console.log(this.props.tileRows);
     return (
       <div className="board">
-        {this.props.tileRows.map(letters => this.renderLetters(letters))}
+        {this.props.tileRows.map((letters, index) => this.renderLetters(letters, index))}
       </div>
     )
   }
