@@ -1,0 +1,15 @@
+.available {
+  min-height: 30px;
+  min-width: 30px;
+  font-size: 18px;
+  font-color: black;
+  border-radius: 3px;
+}
+
+.chosen {
+  min-height: 30px;
+  min-width: 30px;
+  font-size: 18px;
+  font-color: red;
+  border-radius: 3px;
+}

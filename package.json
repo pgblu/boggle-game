@@ -1,0 +1,25 @@
+{
+  "name": "boggle-game",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "flow-bin": "^0.80.0",
+    "lorem-ipsum": "^1.0.6",
+    "mobx": "^5.1.0",
+    "mobx-react": "^5.2.6",
+    "react": "^16.5.0",
+    "react-app-rewired": "^1.6.2",
+    "react-dom": "^16.5.0",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "flow": "flow",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-app-rewire-mobx": "^1.0.8"
+  }
+}
