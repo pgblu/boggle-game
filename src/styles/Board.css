@@ -1,4 +1,5 @@
 .board {
   display: flex;
-  flex-flow: column space-evenly;
+  flex: column wrap;
+  justify-content: space-evenly;
 }

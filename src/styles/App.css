@@ -16,6 +16,6 @@
 }
 
 .container {
-  min-height: 960px;
-  min-width: 960px;
+  height: 960px;
+  width: 960px;
 }

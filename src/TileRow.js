@@ -23,9 +23,9 @@ class TileRow extends Component<TileRowProps> {
     const content = this.props.content;
     const prefix = this.props.id;
     return (
-      <p>
+      <div>
         {content.map((letter, index) => this.renderLetter(letter, prefix, index))}
-      </p>
+      </div>
     )
   }
 }
