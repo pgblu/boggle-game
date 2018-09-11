@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap-sass": "^3.3.7",
     "flow-bin": "^0.80.0",
     "lorem-ipsum": "^1.0.6",
     "mobx": "^5.1.0",
