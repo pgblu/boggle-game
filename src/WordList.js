@@ -3,6 +3,8 @@
 import React, { Component } from 'react';
 import {observer} from 'mobx-react';
 
+import './styles/WordList.css';
+
 import AppState from './AppState.js';
 
 @observer
@@ -11,14 +13,14 @@ class WordList extends Component {
 
   renderWord(word) {
     return (
-      <li>{word}</li>
+      <div>{word}</div>
     )
   }
   render() {
     return (
-      <ul>
+      <div className="word-list">
         {this.found_words.map(word => this.renderWord(word))}
-      </ul>)
+      </div>)
   }
 }
 

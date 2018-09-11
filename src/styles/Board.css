@@ -1,5 +1,7 @@
 .board {
-  display: flex;
-  flex: column wrap;
-  justify-content: space-evenly;
+  height: 375px;
+  width: 375px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 4px;
 }

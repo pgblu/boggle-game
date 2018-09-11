@@ -1,15 +1,14 @@
 .available {
-  min-height: 30px;
-  min-width: 30px;
+  vertical-align: middle;
   font-size: 18px;
   font-color: black;
+  border: 2px solid #8ECE95;
   border-radius: 3px;
 }
 
 .chosen {
-  min-height: 30px;
-  min-width: 30px;
   font-size: 18px;
   font-color: red;
+  border: 2px solid #8ECE95;
   border-radius: 3px;
 }

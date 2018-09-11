@@ -14,7 +14,7 @@ class Tile extends Component<TileProps> {
 
   render() {
     const {props} = this;
-    return <span className={props.chosen ? 'chosen' : 'available'}>{props.letter}</span>
+    return <div className={props.chosen ? 'chosen' : 'available'}>{props.letter}</div>
   }
 }
 

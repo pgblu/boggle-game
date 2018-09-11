@@ -16,6 +16,11 @@
 }
 
 .container {
-  height: 960px;
+  height: 425px;
   width: 960px;
+  display: grid;
+  margin: 10px;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 8fr 1fr;
+  grid-gap: 5px;
 }
