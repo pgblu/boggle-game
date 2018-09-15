@@ -1,14 +1,15 @@
 .available {
-  vertical-align: middle;
-  font-size: 18px;
-  font-color: black;
+  font-size: 38px;
+  font-weight: 900;
+  color: black;
   border: 2px solid #8ECE95;
   border-radius: 3px;
+  padding-top: 7px;
 }
 
 .chosen {
   font-size: 18px;
-  font-color: red;
+  color: red;
   border: 2px solid #8ECE95;
   border-radius: 3px;
 }
