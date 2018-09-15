@@ -20,7 +20,6 @@ class Board extends Component<BoardProps> {
   }
 
   render() {
-    console.log(this.props.tileRows);
     return (
       <div className="board">
         {this.props.tileRows.map((letters, index) => this.renderLetters(letters, index))}
