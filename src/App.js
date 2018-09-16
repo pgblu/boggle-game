@@ -3,6 +3,7 @@ import './styles/App.css';
 import Board from './Board.js';
 import WordList from './WordList.js';
 import ScoreReport from './ScoreReport.js';
+import SizeSelector from './SizeSelector.js';
 import AppState from './AppState.js';
 
 import BoardPopulator from './BoardPopulatorUtil.js';
@@ -23,7 +24,10 @@ class App extends Component {
         <div className="container">
           <Board tileRows={this.tileRows}/>
           <WordList />
-          <input type="text" name="entry" onChange={this.handleInput} />
+          <div>
+            <input type="text" name="entry" onChange={this.handleInput} />
+            <SizeSelector sizes={[4,5,6]}/>
+          </div>
           <ScoreReport />
         </div>
       </div>
