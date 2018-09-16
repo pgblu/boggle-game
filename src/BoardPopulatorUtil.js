@@ -1,27 +1,21 @@
-import { dictionary } from './dictionary.js';
+import { dice } from './dictionary.js';
 
-const shuffle = (arr1) => {
-  return arr1.reduce((a,v)=>a.splice(Math.floor(Math.random() * a.length), 0, v) && a, [])
+const shuffle = (arr) => {
+  return arr.reduce((a,v)=>a.splice(Math.floor(Math.random() * a.length), 0, v) && a, [])
 }
 
-export default function BoardPopulator(...dimensions) {
-  const number_of_rows = dimensions[0];
-  const number_of_tiles_per_row = dimensions[1];
-  const total_tiles = dimensions.reduce((acc,curr) => acc * curr)
-  let sample_text = loremIpsum({
-    count: 15,
-    units: 'paragraphs',
-    format: 'plain'
-  });
-  let sample = sample_text.replace(/[A-Z,. ]/g,'').replace(/qu/g,'q');
-  let start = sample.indexOf('e');
-  sample = shuffle(sample.substr(start, start + (total_tiles)).split("").map(x => x.toUpperCase()));
-  let result = []
-  for (let i=0; i < number_of_rows; i++) {
+export default function BoardPopulator() {
+  let dice_array = shuffle(dice);
+  console.log(dice_array[0]);
+  console.log(dice_array.length);
+  let result = [];
+  for (let i=0; i < 6; i++) {
     result.push([]);
-    let counter = i * number_of_rows;
-    for (let j=0; j < number_of_tiles_per_row; j++) {
-      result[i].push(sample[counter + j])
+    let counter = i * 6;
+    for (let j=0; j < 6; j++) {
+      let die = dice_array[counter + j];
+      let face = Math.floor(Math.random() * 6);
+      result[i].push(die[face]);
     }
   }
   return result;

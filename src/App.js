@@ -8,7 +8,7 @@ import AppState from './AppState.js';
 import BoardPopulator from './BoardPopulatorUtil.js';
 
 class App extends Component {
-  tileRows = BoardPopulator(6, 6);
+  tileRows = BoardPopulator();
 
   handleInput = (event) => {
     console.log(event);
