@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
     "flow-bin": "^0.80.0",
     "mobx": "^5.1.0",
     "mobx-react": "^5.2.6",
