@@ -4,6 +4,7 @@ import {observable, action, computed} from 'mobx';
 
 class AppState {
   @observable found_words: Array<string> = [];
+  @observable grid_width: number = 6;
 
   @computed
   get score(): number {

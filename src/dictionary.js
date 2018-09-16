@@ -1,4 +1,5 @@
-export const dice = [
+export const dice = {
+    6:[
     ["A", "A", "A", "F", "R", "S"],
     ["A", "A", "E", "E", "E", "E"],
     ["A", "A", "E", "E", "O", "O"],

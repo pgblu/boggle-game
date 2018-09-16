@@ -21,7 +21,7 @@ class Board extends Component<BoardProps> {
 
   render() {
     return (
-      <div className="board">
+      <div className={`board-${AppState.grid_width}`}>
         {this.props.tileRows.map((letters, index) => this.renderLetters(letters, index))}
       </div>
     )
