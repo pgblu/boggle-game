@@ -1,4 +1,4 @@
-import loremIpsum from 'lorem-ipsum';
+import { dictionary } from './dictionary.js';
 
 const shuffle = (arr1) => {
   return arr1.reduce((a,v)=>a.splice(Math.floor(Math.random() * a.length), 0, v) && a, [])

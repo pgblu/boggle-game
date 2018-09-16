@@ -1,4 +1,4 @@
-var dictionary = {
+export const dictionary = {
   words: [
     "the",
     "mind",
@@ -2781,5 +2781,3 @@ var dictionary = {
     "decuria"
   ]
 };
-
-module.exports = dictionary;
