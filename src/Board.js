@@ -14,9 +14,10 @@ type BoardProps = {
 @observer
 class Board extends Component<BoardProps> {
   props: BoardProps;
+
   renderLetters(letters, index) {
     return (
-      <TileRow content={letters} key={index} id={index}/>
+      <TileRow content={letters} key={index} id={index} />
     )
   }
 
