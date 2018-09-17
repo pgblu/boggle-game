@@ -14,7 +14,7 @@ class App extends Component {
   tileRows = () => BoardPopulator(AppState.gridWidth);
 
   handleInput = (event) => {
-    console.log(event);
+    AppState.foundWords.push(event.target.value);
   }
 
   renderBoard() {
@@ -33,6 +33,7 @@ class App extends Component {
         <SizeSelector sizes={[4,5,6]} />
         <div className="container">
           {this.renderBoard()}
+          <WordList />
           <input type="text" name="entry" onChange={this.handleInput} />
           <ScoreReport />
         </div>
