@@ -8,7 +8,6 @@ class AppState {
 
   @action setGridWidth(value) {
     this.gridWidth = value;
-    console.log(this.gridWidth);
   };
 
   @computed

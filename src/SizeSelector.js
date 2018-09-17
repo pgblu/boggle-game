@@ -12,7 +12,7 @@ class SizeSelector extends Component<SizeSelectorProps> {
   props: SizeSelectorProps;
 
   renderOption(size) {
-    return <button onClick={() => AppState.setGridWidth(this.id)} className="size-option" key={size} id={size}>{size}x{size}</button>
+    return <button onClick={() => AppState.setGridWidth(size)} className="size-option" key={size} id={size}>{size}x{size}</button>
   }
   render() {
     return (

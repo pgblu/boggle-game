@@ -11,13 +11,20 @@ import BoardPopulator from './BoardPopulatorUtil.js';
 
 @observer
 class App extends Component {
-  tileRows = BoardPopulator(AppState.grid_width);
+  tileRows = () => BoardPopulator(AppState.gridWidth);
 
   handleInput = (event) => {
     console.log(event);
   }
 
+  renderBoard() {
+    return (
+      <Board tileRows={this.tileRows()} />
+    )
+  }
+
   render() {
+    console.log(this.tileRows());
     return (
       <div className="App">
         <header className="App-header">
@@ -25,8 +32,7 @@ class App extends Component {
         </header>
         <SizeSelector sizes={[4,5,6]} />
         <div className="container">
-          <Board tileRows={this.state.tileRows}/>
-          <WordList />
+          {this.renderBoard()}
           <input type="text" name="entry" onChange={this.handleInput} />
           <ScoreReport />
         </div>
