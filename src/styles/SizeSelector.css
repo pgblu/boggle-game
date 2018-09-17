@@ -1,0 +1,8 @@
+.size-option {
+  margin: 6px 14px 0 0;
+  padding: 2px 18px 3px 18px;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}

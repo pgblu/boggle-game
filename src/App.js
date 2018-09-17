@@ -23,13 +23,11 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Play Boggle!</h1>
         </header>
+        <SizeSelector sizes={[4,5,6]} />
         <div className="container">
-          <Board tileRows={this.tileRows}/>
+          <Board tileRows={this.state.tileRows}/>
           <WordList />
-          <div>
-            <input type="text" name="entry" onChange={this.handleInput} />
-            <SizeSelector sizes={[4,5,6]}/>
-          </div>
+          <input type="text" name="entry" onChange={this.handleInput} />
           <ScoreReport />
         </div>
       </div>
