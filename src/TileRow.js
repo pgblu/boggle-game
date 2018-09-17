@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 import Tile from './Tile.js';
 
 import './styles/TileRow.css';
@@ -9,8 +10,9 @@ type TileRowProps = {
   content: string,
   key: number,
   id: number
-}
+};
 
+@observer
 class TileRow extends Component<TileRowProps> {
   props: TileRowProps;
 
@@ -25,7 +27,7 @@ class TileRow extends Component<TileRowProps> {
     const content = this.props.content;
     const prefix = this.props.id;
     return (
-      <div className="tile-row" style={{gridTemplateColumns: `repeat(${AppState.grid_width}, 1fr)`}}>
+      <div className="tile-row" style={{gridTemplateColumns: `repeat(${AppState.gridWidth}, 1fr)`}}>
         {content.map((letter, index) => this.renderLetter(letter, prefix, index))}
       </div>
     )

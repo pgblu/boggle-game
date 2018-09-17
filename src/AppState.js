@@ -3,15 +3,20 @@
 import {observable, action, computed} from 'mobx';
 
 class AppState {
-  @observable found_words: Array<string> = [];
-  @observable grid_width: number = 6;
+  @observable foundWords: Array<string> = [];
+  @observable gridWidth: number = 6;
+
+  @action setGridWidth(value) {
+    this.gridWidth = value;
+    console.log(this.gridWidth);
+  };
 
   @computed
   get score(): number {
-    if (this.found_words.length === 0) {
+    if (this.foundWords.length === 0) {
       return 0;
     }
-    let result = this.found_words.map(word => word.length ** 2).reduce((acc, curr) => {
+    let result = this.foundWords.map(word => word.length ** 2).reduce((acc, curr) => {
       return acc + curr;
     });
     return result;

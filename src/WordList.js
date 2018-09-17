@@ -9,17 +9,17 @@ import AppState from './AppState.js';
 
 @observer
 class WordList extends Component {
-  found_words: Array<string> = AppState.found_words;
+  foundWords: Array<string> = AppState.foundWords;
 
   renderWord(word) {
     return (
-      <div>{word}</div>
+      <div className="found-word">{word}</div>
     )
   }
   render() {
     return (
       <div className="word-list">
-        {this.found_words.map(word => this.renderWord(word))}
+        {this.foundWords.map(word => this.renderWord(word))}
       </div>)
   }
 }
