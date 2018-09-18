@@ -1,0 +1,11 @@
+.input-area {
+  display: flex;
+  flex: row nowrap;
+}
+
+.input-field {
+  flex-grow: 2;
+}
+
+.input-submit {
+}

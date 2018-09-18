@@ -4,22 +4,21 @@ import React, { Component } from 'react';
 import {observer} from 'mobx-react';
 import AppState from './AppState.js';
 
+import './styles/InputForm.css';
+
 @observer
 class InputForm extends Component {
 
   handleInput = (event) => {
-    console.log(event);
-    if (true) {
-      AppState.foundWords.push(event.target.value)
-    }
+    AppState.foundWords.push(event.target.value)
   }
 
   render() {
     return (
-      <form>
+      <div className="input-area">
         <input className="input-field" type="text" name="entry" onSubmit={this.handleInput} />
-        <input className="input-submit" type="submit" value="Submit" />
-      </form>
+        <button className="input-submit" onClick={this.handleInput} />
+      </div>
     )
   }
 }
