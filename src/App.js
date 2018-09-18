@@ -3,6 +3,7 @@ import './styles/App.css';
 import { observer } from 'mobx-react';
 import Board from './Board.js';
 import WordList from './WordList.js';
+import InputForm from './InputForm.js';
 import ScoreReport from './ScoreReport.js';
 import SizeSelector from './SizeSelector.js';
 import AppState from './AppState.js';
@@ -13,10 +14,6 @@ import BoardPopulator from './BoardPopulatorUtil.js';
 class App extends Component {
   tileRows = () => BoardPopulator(AppState.gridWidth);
 
-  handleInput = (event) => {
-    AppState.foundWords.push(event.target.value);
-  }
-
   renderBoard() {
     return (
       <Board tileRows={this.tileRows()} />
@@ -24,7 +21,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.tileRows());
     return (
       <div className="App">
         <header className="App-header">
@@ -34,7 +30,7 @@ class App extends Component {
         <div className="container">
           {this.renderBoard()}
           <WordList />
-          <input type="text" name="entry" onChange={this.handleInput} />
+          <InputForm />
           <ScoreReport />
         </div>
       </div>
