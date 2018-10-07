@@ -8,17 +8,26 @@ import './styles/InputForm.css';
 
 @observer
 class InputForm extends Component {
-
-  handleInput = (event) => {
-    AppState.foundWords.push(event.target.value)
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
   }
+
+  handleChange = (event) => {
+    this.setState({value: event.target.value});
+  };
+
+  handleSubmit = (event) => {
+    AppState.foundWords.push(event.target.value);
+    this.setState({value: ''});
+  };
 
   render() {
     return (
-      <div className="input-area">
-        <input className="input-field" type="text" name="entry" onSubmit={this.handleInput} />
-        <button className="input-submit" onClick={this.handleInput} />
-      </div>
+      <form className="input-area" onSubmit={this.handleSubmit}>
+        <input className="input-field" type="text" value={this.state.value} onChange={this.handleChange} />
+        <input className="input-submit" type="submit" value="Submit" onClick={this.handleInput} />
+      </form>
     )
   }
 }
