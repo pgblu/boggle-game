@@ -18,7 +18,8 @@ class InputForm extends Component {
   };
 
   handleSubmit = (event) => {
-    AppState.foundWords.push(event.target.value);
+    event.preventDefault();
+    AppState.foundWords.push(this.state.value);
     this.setState({value: ''});
   };
 
@@ -26,7 +27,7 @@ class InputForm extends Component {
     return (
       <form className="input-area" onSubmit={this.handleSubmit}>
         <input className="input-field" type="text" value={this.state.value} onChange={this.handleChange} />
-        <input className="input-submit" type="submit" value="Submit" onClick={this.handleInput} />
+        <input className="input-submit" type="submit" value="Submit" />
       </form>
     )
   }

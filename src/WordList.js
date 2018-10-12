@@ -11,15 +11,15 @@ import AppState from './AppState.js';
 class WordList extends Component {
   foundWords: Array<string> = AppState.foundWords;
 
-  renderWord(word) {
+  renderWord(word, index) {
     return (
-      <div className="found-word">{word}</div>
+      <div className="found-word" id={index} key={index}>{word}</div>
     )
   }
   render() {
     return (
       <div className="word-list">
-        {this.foundWords.map(word => this.renderWord(word))}
+        {this.foundWords.map((word, index) => this.renderWord(word, index))}
       </div>)
   }
 }
