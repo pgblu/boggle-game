@@ -5,9 +5,15 @@ import {observable, action, computed} from 'mobx';
 class AppState {
   @observable foundWords: Array<string> = [];
   @observable gridWidth: number = 6;
+  @observable userInput: string = '';
 
   @action setGridWidth(value) {
     this.gridWidth = value;
+  };
+
+  @action setUserInput(value) {
+    this.userInput = value;
+    console.log(`User input: ${this.userInput}`);
   };
 
   @computed

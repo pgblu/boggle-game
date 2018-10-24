@@ -15,6 +15,7 @@ class InputForm extends Component {
 
   handleChange = (event) => {
     this.setState({value: event.target.value});
+    AppState.setUserInput(event.target.value);
   };
 
   handleSubmit = (event) => {
