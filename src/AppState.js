@@ -18,6 +18,10 @@ class AppState {
     console.log(`User input: ${this.userInput}`);
   };
 
+  @action updateFoundWords(word) {
+    foundWords = updateArray(word, foundWords)
+  }
+
   @computed
   get score(): number {
     if (this.foundWords.length === 0) {
