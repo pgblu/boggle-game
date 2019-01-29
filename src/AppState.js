@@ -2,6 +2,8 @@
 
 import {observable, action, computed} from 'mobx';
 
+import updateArray from './utils/updateArray';
+
 class AppState {
   @observable foundWords: Array<string> = [];
   @observable gridWidth: number = 6;

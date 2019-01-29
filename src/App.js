@@ -8,7 +8,7 @@ import ScoreReport from './ScoreReport.js';
 import SizeSelector from './SizeSelector.js';
 import AppState from './AppState.js';
 
-import BoardPopulator from './BoardPopulatorUtil.js';
+import BoardPopulator from './utils/BoardPopulatorUtil.js';
 
 @observer
 class App extends Component {
