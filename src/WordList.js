@@ -9,7 +9,6 @@ import AppState from './AppState.js';
 
 @observer
 class WordList extends Component {
-  foundWords: Array<string> = AppState.foundWords;
 
   renderWord(word, index) {
     return (
@@ -19,7 +18,7 @@ class WordList extends Component {
   render() {
     return (
       <div className="word-list">
-        {this.foundWords.map((word, index) => this.renderWord(word, index))}
+        {AppState.foundWords.map((word, index) => this.renderWord(word, index))}
       </div>)
   }
 }

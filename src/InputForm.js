@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import {observer} from 'mobx-react';
 import AppState from './AppState.js';
 
+import updateArray from './utils/updateArray';
+
 import './styles/InputForm.css';
 
 @observer
@@ -20,8 +22,9 @@ class InputForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    AppState.foundWords.push(this.state.value);
+    AppState.setFoundWords(updateArray(AppState.foundWords, this.state.value));
     this.setState({value: ''});
+    console.log(AppState.foundWords);
   };
 
   render() {

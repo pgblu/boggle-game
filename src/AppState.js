@@ -1,11 +1,9 @@
 // @flow
 
-import {observable, action, computed} from 'mobx';
-
-import updateArray from './utils/updateArray';
+import {observable, action, computed,} from 'mobx';
 
 class AppState {
-  @observable foundWords: Array<string> = [];
+  foundWords = observable([]);
   @observable gridWidth: number = 6;
   @observable userInput: string = '';
 
@@ -15,12 +13,11 @@ class AppState {
 
   @action setUserInput(value) {
     this.userInput = value;
-    console.log(`User input: ${this.userInput}`);
   };
 
-  @action updateFoundWords(word) {
-    foundWords = updateArray(word, foundWords)
-  }
+  @action setFoundWords(newArray) {
+    this.foundWords = newArray;
+  };
 
   @computed
   get score(): number {
